@@ -1,0 +1,12 @@
+@use '../sass/typography' as *;
+@use '../sass/colors' as *;
+
+h2 {
+    @include text-preset1;
+    color: $primary-orange;
+}
+
+p {
+    @include text-preset5;
+    color: $neutral-purple;
+}
