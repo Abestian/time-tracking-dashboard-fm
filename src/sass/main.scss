@@ -1,4 +1,13 @@
 @use 'typography' as *;
 @use 'colors' as *;
-@import 'reset';
-@import 'reusableClasses';
+@use 'reset' as *;
+@use 'reusableClasses' as *;
+
+@media (width > 900px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+}

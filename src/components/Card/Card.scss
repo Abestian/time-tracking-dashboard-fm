@@ -3,7 +3,10 @@
 
 .card {
     padding: 3.2rem;
-    border: 2px solid red;
+    width: 100%;
+    //max-width: 600px;
+    //min-width: 300px;
+    border: 2px solid royalblue;
     border-radius: 15px;
 
     &__title-group {
