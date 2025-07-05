@@ -1,11 +1,10 @@
 import './UserCard.scss';
+import TimeframeButton from "../TimeframeButton/TimeframeButton.jsx";
 
 function UserCard() {
+
     return (
-        <div className="user-card">
-            <h2>Hello</h2>
-            <p>Name Surname</p>
-        </div>
+        <></>
     )
 }
 

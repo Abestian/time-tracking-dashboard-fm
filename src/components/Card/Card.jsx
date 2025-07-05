@@ -1,7 +1,7 @@
 import './Card.scss'
 import iconEllipsis from '../../assets/images/icon-ellipsis.svg';
 
-function Card({title, currentTime, previousTime}) {
+function Card({title, currentTime, previousTime, children}) {
     return (
         <div className="card">
             <div className="card__title-group row">
@@ -10,8 +10,10 @@ function Card({title, currentTime, previousTime}) {
             </div>
             {currentTime === 1 ? <h3 className="card__time">{currentTime} hr</h3> :
                 <h3 className="card__time">{currentTime} hrs</h3>}
+            {previousTime === 1 ? <h3 className="card__last-week">{children} {previousTime} hr</h3> :
+                <h3 className="card__last-week">{children} {previousTime} hrs</h3>}
 
-            <h3 className="card__last-week">{previousTime} hrs</h3>
+
         </div>
     )
 }
