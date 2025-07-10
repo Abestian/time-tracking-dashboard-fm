@@ -2,11 +2,19 @@
 @use '../../sass/colors' as *;
 
 .card {
+    //position: relative;
     padding: 3.2rem;
     width: 100%;
     min-width: 255px;
     border: 2px solid royalblue;
     border-radius: 15px;
+
+    &__cosmetic {
+        border: 2px solid royalblue;
+        width: 100%;
+        padding: 0;
+        //position: absolute;
+    }
 
     &__title-group {
         justify-content: space-between;
