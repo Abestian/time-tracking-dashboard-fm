@@ -24,12 +24,30 @@ function App() {
     }
 
     const images = {
-        "Work": iconWork,
-        "Exercise": iconExercise,
-        "Play": iconPlay,
-        "Self Care": iconSelfCare,
-        "Social": iconSocial,
-        "Study": iconStudy,
+        "Work": {
+            icon: iconWork,
+            className: "card__work",
+        },
+        "Exercise": {
+            icon: iconExercise,
+            className: "card__exercise",
+        },
+        "Play": {
+            icon: iconPlay,
+            className: "card__play",
+        },
+        "Self Care": {
+            icon: iconSelfCare,
+            className: "card__self-care",
+        },
+        "Social": {
+            icon: iconSocial,
+            className: "card__social",
+        },
+        "Study": {
+            icon: iconStudy,
+            className: "card__study",
+        },
     }
 
     const [data, setData] = useState([]);
@@ -60,7 +78,8 @@ function App() {
                 {data.length > 0 && data.map((item) =>
                     <Card key={item.title}
                           title={item.title}
-                          image={images[item.title]}
+                          image={images[item.title].icon}
+                          typeClass={images[item.title].className}
                           currentTime={item.timeframes[selectedTimeframe].current}
                           previousTime={item.timeframes[selectedTimeframe].previous}>{timeframeLabels[selectedTimeframe]}</Card>)
                 }

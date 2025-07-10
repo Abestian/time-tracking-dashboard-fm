@@ -3,17 +3,58 @@
 
 .card {
     //position: relative;
-    padding: 3.2rem;
+
     width: 100%;
     min-width: 255px;
-    border: 2px solid royalblue;
     border-radius: 15px;
+    overflow: hidden;
 
+    // cosmetic part of the card
     &__cosmetic {
-        border: 2px solid royalblue;
+        position: relative;
+        margin-bottom: -1.5em;
         width: 100%;
-        padding: 0;
-        //position: absolute;
+        height: 60px;
+        overflow: hidden;
+        z-index: -2;
+    }
+
+    &__icon {
+        position: absolute;
+        top: -0.5em;
+        right: 1.5em;
+    }
+
+    &__work {
+        background-color: $primary-orange;
+    }
+
+    &__exercise {
+        background-color: $primary-green;
+    }
+
+    &__play {
+        background-color: $primary-blue;
+    }
+
+    &__self-care {
+        background-color: $primary-yellow;
+    }
+
+    &__social {
+        background-color: $primary-purple-dark;
+    }
+
+    &__study {
+        background-color: $primary-pink;
+    }
+
+    // content part of the card
+    &__content {
+        padding: 3.2rem;
+        color: #fff;
+        background-color: $neutral-purple-dark;
+        border-radius: 15px;
     }
 
     &__title-group {
@@ -26,8 +67,14 @@
     }
 
     &__dots {
-        width: 18px;
+        width: 24px;
         height: 100%;
+        padding: .25em;
+        transition: width 0.25s;
+
+        &:hover {
+            width: 25px;
+        }
     }
 
     &__time {
@@ -35,7 +82,8 @@
         padding: 2.4rem 0 0.8rem 0;
     }
 
-    &__last-week {
+    &__last-time {
         @include text-preset6;
+        color: $neutral-purple-light;
     }
 }
