@@ -1,0 +1,23 @@
+@use '../../sass/typography' as *;
+@use '../../sass/colors' as *;
+
+li {
+    list-style: none;
+}
+
+button {
+    @include text-preset5;
+    padding-inline: 0.75em;
+    color: $neutral-purple;
+    background: none;
+    font-weight: 400;
+    transition: color .3s, opacity .3s;
+
+    &:hover, &:focus {
+        opacity: 0.7;
+    }
+}
+
+.active {
+    color: #fff;
+}

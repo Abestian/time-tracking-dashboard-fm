@@ -3,6 +3,10 @@
 @use 'reset' as *;
 @use 'reusableClasses' as *;
 
+body {
+    background-color: $neutral-black;
+}
+
 @media (width > 900px) {
     body {
         display: flex;

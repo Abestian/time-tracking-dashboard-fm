@@ -2,6 +2,8 @@
 @use '../../sass/colors' as *;
 
 .user-card {
+    display: flex;
+    flex-direction: column;
     border-radius: 15px;
     overflow: hidden;
 
@@ -12,6 +14,7 @@
         padding: 3.2rem;
         background-color: $primary-purple-light;
         border-radius: 15px;
+        z-index: 2;
     }
 
     &__image-box {
@@ -35,11 +38,15 @@
     }
 
     &__timeframe-box {
-        border: 2px solid red;
+        margin-top: -3.5em;
+        padding-block: 6em 2.5em;
+        background-color: $neutral-purple-dark;
+        border-radius: 15px;
     }
 
     &__timeframes {
         display: flex;
+        justify-content: space-evenly;
         flex-direction: row;
     }
 }
@@ -51,16 +58,34 @@
     }
 }
 
-@media (width > 900px) {
-    .user-card {
-        grid-column: 1 / -1;
-        grid-row: 1 / 1;
-    }
-}
-
 @media (width > 1200px) {
     .user-card {
         grid-column: 1 / 1;
         grid-row: 1 / -1;
+
+        &__info {
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+        }
+
+        &__report-for {
+            @include text-preset2;
+        }
+
+        &__image-box {
+            height: 78px;
+        }
+
+        &__timeframe-box {
+            margin-top: -3.5em;
+            padding-block: 3.5em 0;
+        }
+
+        &__timeframes {
+            flex-direction: column;
+            gap: 2.1em;
+            padding: 3.2em;
+        }
     }
 }
