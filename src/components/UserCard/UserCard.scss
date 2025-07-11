@@ -2,16 +2,45 @@
 @use '../../sass/colors' as *;
 
 .user-card {
-    padding: 3.2rem;
-    border: 2px solid lime;
+    border-radius: 15px;
+    overflow: hidden;
 
-    h2 {
-        @include text-preset2;
-
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 2.4em;
+        padding: 3.2rem;
+        background-color: $primary-purple-light;
+        border-radius: 15px;
     }
 
-    p {
-        @include text-preset5;
+    &__image-box {
+        height: 64px;
+    }
+
+    &__image {
+        height: 100%;
+        border: 5px solid #fff;
+        border-radius: 50%;
+    }
+
+    &__report-text {
+        @include text-preset6;
+        color: $neutral-purple-light;
+    }
+
+    &__report-for {
+        @include text-preset4;
+        color: #fff;
+    }
+
+    &__timeframe-box {
+        border: 2px solid red;
+    }
+
+    &__timeframes {
+        display: flex;
+        flex-direction: row;
     }
 }
 

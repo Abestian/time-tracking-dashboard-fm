@@ -11,7 +11,8 @@ function Card({title, currentTime, previousTime, children, image, typeClass}) {
             <div className="card__content">
                 <div className="card__title-group row">
                     <h2 className="card__name">{title}</h2>
-                    <img src={iconEllipsis} alt="" className="card__dots"/>
+                    {/* alt tag empty, because it's purely cosmetic */}
+                    <img src={iconEllipsis} alt="" className=""/>
                 </div>
 
                 {currentTime === 1 ? <h3 className="card__time">{currentTime} hr</h3> :
@@ -19,8 +20,6 @@ function Card({title, currentTime, previousTime, children, image, typeClass}) {
                 {previousTime === 1 ? <h4 className="card__last-time">{children} {previousTime} hr</h4> :
                     <h4 className="card__last-time">{children} {previousTime} hrs</h4>}
             </div>
-
-
         </div>
     )
 }

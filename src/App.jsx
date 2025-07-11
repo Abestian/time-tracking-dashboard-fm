@@ -17,12 +17,14 @@ function App() {
         setSelectedTimeframe(selectedTimeframe);
     }
 
+    // helper array to set correct timeframe when choosing different options
     const timeframeLabels = {
         daily: 'Yesterday - ',
         weekly: 'Last Week - ',
         monthly: 'Last Month - '
     }
 
+    // helper array to dynamically set colors and icons of cards' cosmetic part
     const images = {
         "Work": {
             icon: iconWork,
@@ -53,12 +55,6 @@ function App() {
     const [data, setData] = useState([]);
     const getData = () => {
         fetch('data.json'
-            , {
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                }
-            }
         )
             .then(function (response) {
                 return response.json();
