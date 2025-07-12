@@ -2,8 +2,6 @@
 @use '../../sass/colors' as *;
 
 .card {
-    //position: relative;
-
     width: 100%;
     min-width: 255px;
     border-radius: 15px;
@@ -83,13 +81,33 @@
         }
     }
 
-    &__time {
-        @include text-preset1;
+    &__time-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding: 2.4rem 0 0.8rem 0;
+    }
+
+    &__time {
+        @include text-preset3;
     }
 
     &__last-time {
         @include text-preset6;
         color: $neutral-purple-light;
+    }
+}
+
+@media (width > 600px) {
+    .card {
+        &__time-box {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.8em;
+        }
+
+        &__time {
+            @include text-preset1;
+        }
     }
 }

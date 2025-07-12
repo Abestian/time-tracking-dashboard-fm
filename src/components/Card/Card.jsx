@@ -15,10 +15,12 @@ function Card({title, currentTime, previousTime, children, image, typeClass}) {
                     <img src={iconEllipsis} alt="" className=""/>
                 </div>
 
-                {currentTime === 1 ? <h3 className="card__time">{currentTime} hr</h3> :
-                    <h3 className="card__time">{currentTime} hrs</h3>}
-                {previousTime === 1 ? <h4 className="card__last-time">{children} {previousTime} hr</h4> :
-                    <h4 className="card__last-time">{children} {previousTime} hrs</h4>}
+                <div className="card__time-box">
+                    {currentTime === 1 ? <h3 className="card__time">{currentTime} hr</h3> :
+                        <h3 className="card__time">{currentTime} hrs</h3>}
+                    {previousTime === 1 ? <h4 className="card__last-time">{children} {previousTime} hr</h4> :
+                        <h4 className="card__last-time">{children} {previousTime} hrs</h4>}
+                </div>
             </div>
         </div>
     )
